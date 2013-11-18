@@ -9,5 +9,5 @@ client = TwilioRestClient(account_sid, auth_token)
 # Make the call
 call = client.calls.create(to="+12037339862",
                            from_="+12038262959",
-                           url="https://dl.dropboxusercontent.com/u/80891743/twilio.xml") #address is in my public dropbox folder
+                           url="https://dl.dropboxusercontent.com/u/80891743/twilio.xml")
 print call.sid
