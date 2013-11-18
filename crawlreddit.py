@@ -9,18 +9,15 @@ r.text
 
 data = r.json()
 
-#for child in data['data']['children']:
-#    print child['data']['subreddit']
-
 for child in data['data']['children']:
-    x = child['data']['subreddit']
-    
+    x = child['data']['title']; 
+    break;                      
+                                
 print x
 
 fb.write("?xml version='1.0' encoding='UTF-8'?>\n");
 fb.write("<Response>\n");
-fb.write("  <Say voice='woman'> The substring is " + str(x) + "\n");
-fb.write("  .</Say>\n");
+fb.write("  <Say voice='woman'> The top headline is " + str(x) + "Submitted by Tony Blum\n");
+fb.write("  </Say>\n");
 fb.write("</Response>\n");
 fb.close()
-
